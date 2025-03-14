@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import 'tailwindcss';
+@plugin "daisyui" {
+    themes: light --default, dark --prefersdark, cupcake;
+}
+
+@layer base {
+    :root {
+        --primary: #c3fff6;
+        --secondary: #5bc0be;
+        --accent: #ff9f68;
+        --neutral: #333333;
+        --background: #f0fdfa;
+        --border: #a0e1d9;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: var(--background);
+    color: var(--neutral);
+}
+
+.logo img {
+    height: 52px;
+    width: auto;
+}
+.navbar{
+    background-color: #bff8f7;
+}
