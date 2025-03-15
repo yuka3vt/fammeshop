@@ -10,7 +10,7 @@
         --secondary: #5bc0be;
         --accent: #ff9f68;
         --neutral: #333333;
-        --background: #f0fdfa;
+        --background: #fff;
         --border: #a0e1d9;
     }
 }
@@ -20,11 +20,125 @@ body {
     background-color: var(--background);
     color: var(--neutral);
 }
+.card{
+    width: 90%;
+    max-width: 420px;
+}
 
 .logo img {
-    height: 52px;
-    width: auto;
+    max-width: 180px; 
+    height: auto;
 }
 .navbar{
-    background-color: #bff8f7;
+    background-color:  var(--background);
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.navbar-center ul li {
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.active {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.navbar-center ul li::after,
+.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #67e8f9, #38bdf8);
+    left: -100%;
+    bottom: 0;
+    transition: left 0.3s ease-in-out;
+}
+
+.navbar-center ul li:hover::after,
+.active::after {
+    left: 0;
+}
+
+.navbar-center ul li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.navbar-end a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-end a:hover {
+    transform: scale(1.1);
+}
+
+.main-content {
+    flex: 1;
+    flex-direction: column;
+}
+
+.logo-auth {
+    max-width: 200px; 
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.btn-password i{
+    cursor: pointer;
+}
+.text, .password {
+    border-radius: 20px; 
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form-footer{
+    margin-top: 3.8rem;
+}
+.checkbox{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+.form-footer button{
+    border-radius: 20px; 
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    width: 100%;
+    height: 3rem;
+    box-sizing: border-box;
+}
+
+.btn-sosial{
+    border-radius: 20px;
+    height: 3rem;
+    font-weight: normal;
+}
+.content{
+    height: auto;
+    width: auto;
+}
+.alert{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px; 
+}
+.btn-close {
+    background-color: transparent; 
+    border: none;
+}
+
+.btn-close:hover {
+    background-color: transparent; 
+    border: none; 
+}
+.card-alert h3{
+    font-weight: 600;
 }
